@@ -1,0 +1,11 @@
+[Unit]
+Description=alexa
+After=multi-user.target
+[Service]
+User=pi
+Type=simple
+Restart=always
+ExecStart=python3 /usr/bin/alexa_tv_control.py
+RemainAfterExit=yes
+[Install]
+WantedBy=multi-user.target
